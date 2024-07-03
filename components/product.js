@@ -27,6 +27,27 @@ const products = [
     name: "reversible angora cardigan",
     price: 200,
   },
+  {
+    id: 5,
+    kind: "Black",
+    image: require("../assets/dress5.png"),
+    name: "reversible angora cardigan",
+    price: 320,
+  },
+  {
+    id: 6,
+    kind: "Church Wear",
+    image: require("../assets/dress6.png"),
+    name: "reversible angora cardigan",
+    price: 500,
+  },
+  {
+    id: 7,
+    kind: "Lamerei",
+    image: require("../assets/dress7.png"),
+    name: "reversible angora cardigan",
+    price: 200,
+  },
 ];
   export default products;
   

@@ -4,7 +4,6 @@ import {
   Text,
   FlatList,
   Button,
-  StyleSheet,
   ScrollView,
   Image,
   TouchableOpacity,
@@ -30,8 +29,8 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView style={{ marginTop: 20, marginHorizontal: 30 }}>
+    <SafeAreaView style={{ flex: 1, paddingTop: 20, paddingHorizontal: 30, width: '100%'}}>
+      <ScrollView style={{ flexGrow: 1, }}>
         <View
           style={{
             flexDirection: "row",
@@ -80,7 +79,7 @@ const HomeScreen = ({ navigation }) => {
           contentContainerStyle={{ paddingHorizontal: 0, alignItems: "center" }}
           columnWrapperStyle={{ gap: 10, marginBottom: 10 }}
           renderItem={({ item }) => (
-            <View>
+            <View style={{marginBottom: 10, }}>
               <View style={{ position: "relative", width: 165, height: 221 }}>
                 <Image
                   source={item.image}
@@ -120,28 +119,11 @@ const HomeScreen = ({ navigation }) => {
             </View>
           )}
         />
-        <Button
-          title="Go to Cart"
-          onPress={() => navigation.navigate("Cart")}
-        />
+       
       </ScrollView>
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: "#fff",
-  },
-  title: {},
-  product: {
-    padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ccc",
-    marginBottom: 10,
-  },
-});
 
 export default HomeScreen;
